@@ -20,7 +20,7 @@ async def durdur(_, message: Message):
     ) or (
             callsmusic.pytgcalls.active_calls[message.chat.id] == 'Duraklatıldı'
     ):
-        await message.reply_text("❗ Hiçbir şey çalmıyor!")
+        await message.reply_text("❗ heç nə oynamır!")
     else:
         callsmusic.pytgcalls.pause_stream(message.chat.id)
         await message.reply_text("▶️ **Müzik duraklatıldı!**\n\n• Müzik kullanımına devam etmek için **komut » devam**") 
@@ -74,7 +74,7 @@ async def atla(_, message: Message):
                 callsmusic.queues.get(message.chat.id)["file"]
             )
 
-        await message.reply_text("⏭️ **__Şarkı bir sonraki kuyruğa atlatıldı__**")
+        await message.reply_text("⏭️ **Şarkı bir sonraki kuyruğa atlatıldı**")
 
 @Client.on_message(command("ver"))
 @authorized_users_only
